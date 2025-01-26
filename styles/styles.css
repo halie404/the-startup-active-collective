@@ -8,7 +8,11 @@
 }
 
 body {
-  font-family: var(--heading-font);
+  font-family: var(--site-font);
+}
+
+button {
+  font-family: var();
 }
 
 /* =========== CONTAINER STYLES =========== */
@@ -75,7 +79,7 @@ body {
     left: 0;
     top: 0;
     width: 100%;
-    width: var(--site-width);
+    width: 100%;
     padding-top: 15rem;
     padding-bottom: 3rem;
     background-color: var(--black);
@@ -116,13 +120,6 @@ body {
     @media (min-width: 1024px) {
       font-size: 1.3rem;
       &:hover {
-        color: black;
-        border: 1px solid none;
-        background-color: #ffc700;
-        padding: 0.5rem;
-        border-radius: 0.1rem;
-      }
-      &:active {
         color: black;
         border: 1px solid none;
         background-color: #ffc700;
@@ -331,9 +328,9 @@ details[open] .filter__options {
   background: none;
   border: none;
 
-  :hover {
+  &:hover {
     cursor: pointer;
-    color: #5f4e01;
+    color: var(--accent-color);
   }
 }
 
@@ -385,9 +382,13 @@ details[open] .filter__options {
   line-height: 1.8;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensure space between content and button */
-  height: 100%; /* Ensures that the height of job postings are equal */
-  position: relative; /* For absolute positioning of the button */
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+
+  &:hover {
+    border: 1.5px solid var(--accent-color);
+  }
 }
 
 .job-posting__date {
@@ -397,7 +398,7 @@ details[open] .filter__options {
 }
 
 .job-posting__title {
-  color: #333;
+  color: var(--soft-black);
   font-size: 1rem;
   margin-bottom: 0.8rem;
 }
@@ -408,7 +409,7 @@ details[open] .filter__options {
 }
 
 .job-posting__description {
-  color: #333;
+  color: var(--soft-black);
   font-size: 0.9rem;
   margin-top: 2rem;
 }
@@ -417,13 +418,79 @@ details[open] .filter__options {
   text-align: center;
   font-weight: bold;
   font-size: 1rem;
-  background: #ffc700;
+  background: var(--accent-color);
   border: 1px solid transparent;
   padding: 0.5rem 1rem;
   cursor: pointer;
   margin-top: 1rem;
+
+  &:hover {
+    color: var(--white);
+    background-color: var(--hover-color);
+  }
 }
 
 /* =========== END JOB POSTING =========== */
+footer {
+  background: var(--black);
+  color: var(--white);
+}
 
-/* =========== end  FILTER styling =========== */
+.footer-top {
+  background: var(--accent-color);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-top h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-top p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.footer-bottom {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .footer-top h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer-top p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-top {
+    padding: 2.5rem;
+  }
+
+  .footer-top h2 {
+    font-size: 1.2rem;
+  }
+
+  .footer-top p {
+    font-size: 0.9rem;
+  }
+}

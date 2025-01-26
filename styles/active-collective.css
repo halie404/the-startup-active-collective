@@ -1,0 +1,79 @@
+/* =============================================
+   Basis CSS
+   ============================================= */
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*:focus-visible {
+  outline: none;
+  box-shadow: 0px 10px 20px 0px var(--box-shadow);
+}
+
+/* =============================================
+   CSS-variabelen
+   ============================================= */
+
+body {
+  /* Typografie */
+  --site-font: "Poppins", sans-serif;
+  --button-font: "Proxima Nova", sans-serif;
+  --icon-font: "actk-icons", serif;
+
+  /* Lijnhoogtes */
+  --line-height-huge: 1;
+  --line-height-large: 4rem;
+  --line-height-medium: 1.8;
+  --line-height-normal: 1.6;
+  --line-height-small: 1;
+
+  /* Kleuren */
+  --black: #000000;
+  --soft-black: #333;
+  --white: #ffffff;
+  --off-white: #f9f9f9;
+  --box-shadow: #0000001a;
+  --full-box-shadow: 0 5px 20px #00000033;
+
+  --footer-color: #fdd835;
+  --see-through-color: #00000080;
+
+  --primary-color: var(--black);
+  --primary-color-alt: #f6f3e8;
+  --secondary-color: #c3bca4;
+  --secondary-color-light: #f6f3e8;
+
+  --accent-color: #ffc700;
+  --hover-color: #413508;
+
+  --primary-text-color: var(--black);
+  --secondary-text-color: var(--white);
+
+  --error-color: #d44848;
+  --color-success: #4bab33;
+
+  --color-gray: rgb(0, 0, 0, 55%);
+  --color-lightgray: #c3bca4;
+
+  /* Knoppen */
+  --button-color: #ffc700;
+  --button-hover: #413508;
+
+  /* Achtergronden */
+  --website-background: var(--white);
+  --main-text-color: var(--black);
+  --background-color-3: var(--primary-color-alt);
+  --background-color-4: var(--secondary-color);
+
+  /* Afmetingen */
+  --header-height: 9.6rem;
+  --site-x-padding: 2.5rem;
+  --site-width: 100%;
+  --column-gap: 2.5rem;
+
+  /* Hoeken */
+  --border-radius: 10px;
+  --half-border-radius: 20px 0 20px;
+}
