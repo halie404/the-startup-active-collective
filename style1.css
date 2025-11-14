@@ -1,0 +1,21 @@
+body {
+  background: black;
+}
+
+p {
+  color: aliceblue;
+}
+
+.title {
+  color: hotpink;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rem;
+}

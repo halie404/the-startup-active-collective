@@ -33,3 +33,14 @@ const filterSummary = document.querySelector(".filter__summary");
 filterSummary.addEventListener("click", function () {
   filterSummary.classList.toggle("clicked");
 });
+
+window.addEventListener("scroll", function () {
+  const filterContainer = document.querySelector(".filter__container");
+  const heroHeight = document.querySelector(".site__hero").offsetHeight;
+
+  if (window.scrollY >= heroHeight) {
+    filterContainer.classList.add("is-fixed");
+  } else {
+    filterContainer.classList.remove("is-fixed");
+  }
+});
