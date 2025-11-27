@@ -3,7 +3,6 @@ const nav = document.querySelector(".site");
 const openMenuBtn = document.querySelector(".open-menu-btn");
 const closeMenuBtn = document.querySelector(".close-menu-btn");
 
-// Toggle the menu open/close on button clicks
 openMenuBtn.addEventListener("click", () => {
   nav.classList.add("menu-open");
 });
@@ -29,11 +28,19 @@ document.querySelectorAll(".filter__show-more").forEach((button) => {
   });
 });
 
-// Get the filter summary element
 const filterSummary = document.querySelector(".filter__summary");
 
-// Add event listener for click
 filterSummary.addEventListener("click", function () {
-  // Toggle the 'clicked' class
   filterSummary.classList.toggle("clicked");
+});
+
+window.addEventListener("scroll", function () {
+  const filterContainer = document.querySelector(".filter__container");
+  const heroHeight = document.querySelector(".site__hero").offsetHeight;
+
+  if (window.scrollY >= heroHeight) {
+    filterContainer.classList.add("is-fixed");
+  } else {
+    filterContainer.classList.remove("is-fixed");
+  }
 });
